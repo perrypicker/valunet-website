@@ -4,26 +4,68 @@
    ============================================ */
 
 :root {
-    /* —— M3-style color roles (tonal, expressive) —— */
-    --md-sys-color-primary: #3b82f6;
+    /* —— Paleta Valunet — M3-style color roles —— */
+    /* Colores de marca: #0b3c5d, #328cc1, #f57c00, #e6e6e6, #1c1c1c */
+    /* Naranja (#f57c00) es el color principal de la marca */
+    
+    --md-sys-color-primary: #f57c00;
     --md-sys-color-on-primary: #ffffff;
-    --md-sys-color-primary-container: rgba(59, 130, 246, 0.18);
-    --md-sys-color-on-primary-container: #93c5fd;
-    --md-sys-color-secondary: #64748b;
-    --md-sys-color-secondary-container: rgba(100, 116, 139, 0.2);
-    --md-sys-color-on-secondary-container: #cbd5e1;
-    --md-sys-color-surface: #0f1419;
-    --md-sys-color-surface-dim: #0a0e12;
-    --md-sys-color-surface-bright: #151b23;
-    --md-sys-color-surface-container-lowest: #11181f;
-    --md-sys-color-surface-container-low: #1a2332;
-    --md-sys-color-surface-container: #1e2a3a;
-    --md-sys-color-surface-container-high: #243042;
-    --md-sys-color-surface-container-highest: #2d3d52;
-    --md-sys-color-on-surface: #e6edf3;
-    --md-sys-color-on-surface-variant: #8b9cad;
-    --md-sys-color-outline: #3d4f66;
-    --md-sys-color-outline-variant: #2d3d52;
+    --md-sys-color-primary-container: rgba(245, 124, 0, 0.25);
+    --md-sys-color-on-primary-container: #ffb366;
+    
+    --md-sys-color-secondary: #328cc1;
+    --md-sys-color-on-secondary: #ffffff;
+    --md-sys-color-secondary-container: rgba(50, 140, 193, 0.2);
+    --md-sys-color-on-secondary-container: #a8d4f0;
+    
+    --md-sys-color-tertiary: #0b3c5d;
+    --md-sys-color-on-tertiary: #ffffff;
+    --md-sys-color-tertiary-container: rgba(11, 60, 93, 0.3);
+    --md-sys-color-on-tertiary-container: #b3d4e8;
+    
+    /* Fondos oscuros */
+    --md-sys-color-surface-dark: #1c1c1c;
+    --md-sys-color-surface-dark-dim: #141414;
+    --md-sys-color-surface-dark-bright: #252525;
+    --md-sys-color-surface-dark-container-lowest: #1f1f1f;
+    --md-sys-color-surface-dark-container-low: #252525;
+    --md-sys-color-surface-dark-container: #2a2a2a;
+    --md-sys-color-surface-dark-container-high: #323232;
+    --md-sys-color-surface-dark-container-highest: #3d3d3d;
+    
+    /* Fondos claros */
+    --md-sys-color-surface-light: #e6e6e6;
+    --md-sys-color-surface-light-dim: #d9d9d9;
+    --md-sys-color-surface-light-bright: #f0f0f0;
+    --md-sys-color-surface-light-container-lowest: #ffffff;
+    --md-sys-color-surface-light-container-low: #f5f5f5;
+    --md-sys-color-surface-light-container: #f0f0f0;
+    --md-sys-color-surface-light-container-high: #e6e6e6;
+    --md-sys-color-surface-light-container-highest: #d9d9d9;
+    
+    /* Texto para fondos oscuros */
+    --md-sys-color-on-surface-dark: #e6e6e6;
+    --md-sys-color-on-surface-dark-variant: #b3b3b3;
+    
+    /* Texto para fondos claros */
+    --md-sys-color-on-surface-light: #1c1c1c;
+    --md-sys-color-on-surface-light-variant: #4d4d4d;
+    
+    /* Outline para ambos temas */
+    --md-sys-color-outline-dark: #4d4d4d;
+    --md-sys-color-outline-dark-variant: #3d3d3d;
+    --md-sys-color-outline-light: #b3b3b3;
+    --md-sys-color-outline-light-variant: #cccccc;
+    
+    /* Valores por defecto (secciones oscuras) */
+    --md-sys-color-surface: var(--md-sys-color-surface-dark);
+    --md-sys-color-surface-container-low: var(--md-sys-color-surface-dark-container-low);
+    --md-sys-color-surface-container: var(--md-sys-color-surface-dark-container);
+    --md-sys-color-surface-container-high: var(--md-sys-color-surface-dark-container-high);
+    --md-sys-color-on-surface: var(--md-sys-color-on-surface-dark);
+    --md-sys-color-on-surface-variant: var(--md-sys-color-on-surface-dark-variant);
+    --md-sys-color-outline: var(--md-sys-color-outline-dark);
+    --md-sys-color-outline-variant: var(--md-sys-color-outline-dark-variant);
 
     /* —— Aliases para compatibilidad —— */
     --color-bg: var(--md-sys-color-surface);
@@ -32,7 +74,7 @@
     --color-text: var(--md-sys-color-on-surface);
     --color-text-muted: var(--md-sys-color-on-surface-variant);
     --color-accent: var(--md-sys-color-primary);
-    --color-accent-hover: #2563eb;
+    --color-accent-hover: #e67300;
     --color-accent-soft: var(--md-sys-color-primary-container);
     --color-border: var(--md-sys-color-outline-variant);
 
@@ -48,10 +90,10 @@
     --radius-lg: var(--md-sys-shape-corner-extra-large);
     --radius-button: var(--md-sys-shape-corner-full);
 
-    /* —— Elevación con surface tint (M3) —— */
-    --md-sys-elevation-1: 0 1px 2px rgba(0, 0, 0, 0.25), 0 2px 6px rgba(59, 130, 246, 0.08);
-    --md-sys-elevation-2: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 12px rgba(59, 130, 246, 0.1);
-    --md-sys-elevation-3: 0 4px 8px rgba(0, 0, 0, 0.22), 0 8px 24px rgba(59, 130, 246, 0.12);
+    /* —— Elevación con surface tint (M3) — usando naranja primary —— */
+    --md-sys-elevation-1: 0 1px 2px rgba(0, 0, 0, 0.3), 0 2px 6px rgba(245, 124, 0, 0.15);
+    --md-sys-elevation-2: 0 2px 4px rgba(0, 0, 0, 0.25), 0 4px 12px rgba(245, 124, 0, 0.18);
+    --md-sys-elevation-3: 0 4px 8px rgba(0, 0, 0, 0.28), 0 8px 24px rgba(245, 124, 0, 0.22);
 
     /* —— Motion (M3 emphasized) —— */
     --md-sys-motion-duration-short: 200ms;
@@ -83,8 +125,8 @@ body {
     font-family: var(--font-body);
     font-size: 1rem;
     line-height: 1.6;
-    color: var(--md-sys-color-on-surface);
-    background-color: var(--md-sys-color-surface);
+    color: var(--md-sys-color-on-surface-dark);
+    background-color: var(--md-sys-color-surface-dark);
 }
 
 .container {
@@ -94,15 +136,15 @@ body {
     padding: 0 1.5rem;
 }
 
-/* ----- Header (M3 surface container) ----- */
+/* ----- Header (M3 surface container - fondo oscuro) ----- */
 .header {
     position: sticky;
     top: 0;
     z-index: 100;
-    background: rgba(15, 20, 25, 0.9);
-    background: color-mix(in srgb, var(--md-sys-color-surface) 85%, transparent);
+    background: rgba(28, 28, 28, 0.9);
+    background: color-mix(in srgb, var(--md-sys-color-surface-dark) 85%, transparent);
     backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--md-sys-color-outline-variant);
+    border-bottom: 1px solid var(--md-sys-color-outline-dark-variant);
     transition: background var(--md-sys-motion-duration-medium) var(--md-sys-motion-easing-emphasized);
 }
 
@@ -117,14 +159,14 @@ body {
     font-family: var(--font-heading);
     font-size: 1.5rem;
     font-weight: 700;
-    color: var(--md-sys-color-on-surface);
+    color: var(--md-sys-color-on-surface-dark);
     text-decoration: none;
     letter-spacing: -0.02em;
 }
 
 .logo-net {
     font-weight: 300;
-    color: var(--md-sys-color-on-surface-variant);
+    color: var(--md-sys-color-on-surface-dark-variant);
 }
 
 .nav-toggle {
@@ -135,7 +177,7 @@ body {
     background: none;
     border: none;
     cursor: pointer;
-    color: var(--md-sys-color-on-surface);
+    color: var(--md-sys-color-on-surface-dark);
 }
 
 .nav-toggle span {
@@ -155,14 +197,30 @@ body {
 }
 
 .nav-list a {
-    color: var(--md-sys-color-on-surface-variant);
+    color: var(--md-sys-color-on-surface-dark-variant);
     text-decoration: none;
     font-weight: 500;
     transition: color var(--md-sys-motion-duration-short) var(--md-sys-motion-easing-emphasized);
+    position: relative;
 }
 
 .nav-list a:hover {
-    color: var(--md-sys-color-on-surface);
+    color: var(--md-sys-color-primary);
+}
+
+.nav-list a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--md-sys-color-primary);
+    transition: width var(--md-sys-motion-duration-medium) var(--md-sys-motion-easing-emphasized);
+}
+
+.nav-list a:hover::after {
+    width: 100%;
 }
 
 @media (max-width: 768px) {
@@ -175,8 +233,8 @@ body {
         top: 100%;
         left: 0;
         right: 0;
-        background: var(--md-sys-color-surface-container-low);
-        border-bottom: 1px solid var(--md-sys-color-outline-variant);
+        background: var(--md-sys-color-surface-dark-container-low);
+        border-bottom: 1px solid var(--md-sys-color-outline-dark-variant);
         padding: 1rem;
         display: none;
     }
@@ -196,11 +254,12 @@ body {
     }
 }
 
-/* ----- Hero ----- */
+/* ----- Hero (fondo oscuro) ----- */
 .hero {
     position: relative;
     padding: 5rem 0 6rem;
     overflow: hidden;
+    background: var(--md-sys-color-surface-dark);
 }
 
 .hero-inner {
@@ -224,7 +283,7 @@ body {
 
 .hero-subtitle {
     font-size: 1.125rem;
-    color: var(--md-sys-color-on-surface-variant);
+    color: var(--md-sys-color-on-surface-dark-variant);
     max-width: 42ch;
     margin: 0 0 2rem;
 }
@@ -240,7 +299,7 @@ body {
     inset: 0;
     background:
         radial-gradient(ellipse 80% 50% at 70% 0%, var(--md-sys-color-primary-container), transparent 50%),
-        radial-gradient(ellipse 60% 40% at 100% 80%, rgba(59, 130, 246, 0.06), transparent 50%);
+        radial-gradient(ellipse 60% 40% at 100% 80%, rgba(245, 124, 0, 0.12), transparent 50%);
     pointer-events: none;
 }
 
@@ -268,21 +327,27 @@ body {
     background: var(--md-sys-color-primary);
     color: var(--md-sys-color-on-primary);
     box-shadow: var(--md-sys-elevation-1);
+    font-weight: 700;
+    transition: background var(--md-sys-motion-duration-short) var(--md-sys-motion-easing-emphasized),
+                box-shadow var(--md-sys-motion-duration-short) var(--md-sys-motion-easing-emphasized),
+                transform var(--md-sys-motion-duration-short) var(--md-sys-motion-easing-emphasized);
 }
 
 .btn-primary:hover {
     background: var(--color-accent-hover);
     box-shadow: var(--md-sys-elevation-2);
+    transform: translateY(-1px);
 }
 
 .btn-secondary {
     background: var(--md-sys-color-secondary-container);
     color: var(--md-sys-color-on-secondary-container);
-    border: none;
+    border: 1px solid rgba(11, 60, 93, 0.3);
 }
 
 .btn-secondary:hover {
-    background: var(--md-sys-color-surface-container-high);
+    background: color-mix(in srgb, var(--md-sys-color-secondary-container) 70%, var(--md-sys-color-secondary));
+    border-color: var(--md-sys-color-secondary);
 }
 
 .btn-block {
@@ -300,18 +365,26 @@ body {
     font-weight: 700;
     margin: 0 0 0.5rem;
     letter-spacing: -0.02em;
-    color: var(--md-sys-color-on-surface);
+    color: var(--md-sys-color-on-surface-dark);
 }
 
 .section-intro {
-    color: var(--md-sys-color-on-surface-variant);
+    color: var(--md-sys-color-on-surface-dark-variant);
     margin: 0 0 2.5rem;
     max-width: 50ch;
 }
 
-/* ----- Servicios (M3 containment + shape + elevation) ----- */
+/* ----- Servicios (fondo claro) ----- */
 .services {
-    background: var(--md-sys-color-surface-container-low);
+    background: var(--md-sys-color-surface-light);
+}
+
+.services .section-title {
+    color: var(--md-sys-color-on-surface-light);
+}
+
+.services .section-intro {
+    color: var(--md-sys-color-on-surface-light-variant);
 }
 
 .services-grid {
@@ -324,11 +397,11 @@ body {
 }
 
 .service-card {
-    background: var(--md-sys-color-surface-container);
-    border: 1px solid var(--md-sys-color-outline-variant);
+    background: var(--md-sys-color-surface-light-container-lowest);
+    border: 1px solid var(--md-sys-color-outline-light-variant);
     border-radius: var(--radius-lg);
     padding: 1.75rem;
-    box-shadow: var(--md-sys-elevation-1);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     transition: border-color var(--md-sys-motion-duration-medium) var(--md-sys-motion-easing-emphasized),
                 transform var(--md-sys-motion-duration-medium) var(--md-sys-motion-easing-emphasized-decelerate),
                 box-shadow var(--md-sys-motion-duration-medium) var(--md-sys-motion-easing-emphasized);
@@ -337,7 +410,16 @@ body {
 .service-card:hover {
     border-color: var(--md-sys-color-primary);
     transform: translateY(-4px);
-    box-shadow: var(--md-sys-elevation-2);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    background: color-mix(in srgb, var(--md-sys-color-surface-light-container-lowest) 95%, var(--md-sys-color-primary-container));
+}
+
+.service-card h3 {
+    color: var(--md-sys-color-on-surface-light);
+}
+
+.service-card p {
+    color: var(--md-sys-color-on-surface-light-variant);
 }
 
 .service-icon {
@@ -345,24 +427,21 @@ body {
     color: var(--md-sys-color-primary);
     margin-bottom: 1rem;
     opacity: 0.95;
+    transition: color var(--md-sys-motion-duration-short) var(--md-sys-motion-easing-emphasized),
+                transform var(--md-sys-motion-duration-medium) var(--md-sys-motion-easing-emphasized);
 }
 
-.service-card h3 {
-    font-family: var(--font-heading);
-    font-size: 1.25rem;
-    font-weight: 600;
-    margin: 0 0 0.5rem;
-    color: var(--md-sys-color-on-surface);
+.service-card:hover .service-icon {
+    color: var(--md-sys-color-primary);
+    opacity: 1;
 }
 
-.service-card p {
-    color: var(--md-sys-color-on-surface-variant);
-    margin: 0;
-    font-size: 0.9375rem;
-    line-height: 1.55;
+
+/* ----- Nosotros (fondo oscuro) ----- */
+.about {
+    background: var(--md-sys-color-surface-dark);
 }
 
-/* ----- Nosotros ----- */
 .about-inner {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -372,7 +451,7 @@ body {
 
 .about-lead {
     font-size: 1.1rem;
-    color: var(--md-sys-color-on-surface-variant);
+    color: var(--md-sys-color-on-surface-dark-variant);
     margin: 0 0 1.5rem;
 }
 
@@ -386,7 +465,7 @@ body {
     padding: 0.5rem 0;
     padding-left: 1.5rem;
     position: relative;
-    color: var(--md-sys-color-on-surface-variant);
+    color: var(--md-sys-color-on-surface-dark-variant);
 }
 
 .about-list li::before {
@@ -401,12 +480,12 @@ body {
 }
 
 .about-list strong {
-    color: var(--md-sys-color-on-surface);
+    color: var(--md-sys-color-on-surface-dark);
 }
 
 .about-card {
-    background: var(--md-sys-color-surface-container-high);
-    border: 1px solid var(--md-sys-color-outline-variant);
+    background: var(--md-sys-color-surface-dark-container-high);
+    border: 1px solid var(--md-sys-color-outline-dark-variant);
     border-radius: var(--radius-lg);
     padding: 2rem;
     text-align: center;
@@ -426,12 +505,12 @@ body {
     display: block;
     font-size: 1.5rem;
     font-weight: 600;
-    color: var(--md-sys-color-on-surface);
+    color: var(--md-sys-color-on-surface-dark);
 }
 
 .about-stat-label {
     font-size: 0.9rem;
-    color: var(--md-sys-color-on-surface-variant);
+    color: var(--md-sys-color-on-surface-dark-variant);
 }
 
 @media (max-width: 768px) {
@@ -444,7 +523,19 @@ body {
     }
 }
 
-/* ----- Contacto ----- */
+/* ----- Contacto (fondo claro) ----- */
+.contact {
+    background: var(--md-sys-color-surface-light);
+}
+
+.contact .section-title {
+    color: var(--md-sys-color-on-surface-light);
+}
+
+.contact .section-intro {
+    color: var(--md-sys-color-on-surface-light-variant);
+}
+
 .contact-wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -467,7 +558,7 @@ body {
 .form-group label {
     font-weight: 500;
     font-size: 0.875rem;
-    color: var(--md-sys-color-on-surface-variant);
+    color: var(--md-sys-color-on-surface-light-variant);
 }
 
 .form-group input,
@@ -476,18 +567,18 @@ body {
     font-size: 1rem;
     padding: 0.75rem 1rem;
     min-height: 48px;
-    background: var(--md-sys-color-surface-container-high);
-    border: 1px solid var(--md-sys-color-outline);
+    background: var(--md-sys-color-surface-light-container-lowest);
+    border: 1px solid var(--md-sys-color-outline-light-variant);
     border-radius: var(--md-sys-shape-corner-large);
-    color: var(--md-sys-color-on-surface);
+    color: var(--md-sys-color-on-surface-light);
     transition: border-color var(--md-sys-motion-duration-short) var(--md-sys-motion-easing-emphasized),
                 box-shadow var(--md-sys-motion-duration-short) var(--md-sys-motion-easing-emphasized);
 }
 
 .form-group input::placeholder,
 .form-group textarea::placeholder {
-    color: var(--md-sys-color-on-surface-variant);
-    opacity: 0.8;
+    color: var(--md-sys-color-on-surface-light-variant);
+    opacity: 0.6;
 }
 
 .form-group input:focus,
@@ -498,20 +589,20 @@ body {
 }
 
 .contact-info {
-    background: var(--md-sys-color-surface-container);
-    border: 1px solid var(--md-sys-color-outline-variant);
+    background: var(--md-sys-color-surface-light-container-lowest);
+    border: 1px solid var(--md-sys-color-outline-light-variant);
     border-radius: var(--radius-lg);
     padding: 1.5rem;
-    box-shadow: var(--md-sys-elevation-1);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .contact-info p {
     margin: 0 0 0.5rem;
-    color: var(--md-sys-color-on-surface-variant);
+    color: var(--md-sys-color-on-surface-light-variant);
 }
 
 .contact-info p strong {
-    color: var(--md-sys-color-on-surface);
+    color: var(--md-sys-color-on-surface-light);
 }
 
 .contact-note {
@@ -526,11 +617,11 @@ body {
     }
 }
 
-/* ----- Footer ----- */
+/* ----- Footer (fondo oscuro) ----- */
 .footer {
     padding: 2rem 0;
-    border-top: 1px solid var(--md-sys-color-outline-variant);
-    background: var(--md-sys-color-surface-container-low);
+    border-top: 1px solid var(--md-sys-color-outline-dark-variant);
+    background: var(--md-sys-color-surface-dark-container-low);
 }
 
 .footer-inner {
@@ -546,16 +637,16 @@ body {
     font-size: 1.25rem;
     font-weight: 700;
     margin: 0;
-    color: var(--md-sys-color-on-surface);
+    color: var(--md-sys-color-on-surface-dark);
 }
 
 .footer-logo .logo-net {
     font-weight: 300;
-    color: var(--md-sys-color-on-surface-variant);
+    color: var(--md-sys-color-on-surface-dark-variant);
 }
 
 .footer-copy {
     margin: 0;
     font-size: 0.875rem;
-    color: var(--md-sys-color-on-surface-variant);
+    color: var(--md-sys-color-on-surface-dark-variant);
 }
