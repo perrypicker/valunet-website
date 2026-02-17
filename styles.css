@@ -7,22 +7,22 @@
     /* —— Paleta Valunet — M3-style color roles —— */
     /* Colores de marca: #0b3c5d, #328cc1, #f57c00, #e6e6e6, #1c1c1c */
     /* Naranja (#f57c00) es el color principal de la marca */
-    
+
     --md-sys-color-primary: #f57c00;
     --md-sys-color-on-primary: #ffffff;
     --md-sys-color-primary-container: rgba(245, 124, 0, 0.25);
     --md-sys-color-on-primary-container: #ffb366;
-    
+
     --md-sys-color-secondary: #328cc1;
     --md-sys-color-on-secondary: #ffffff;
     --md-sys-color-secondary-container: rgba(50, 140, 193, 0.2);
     --md-sys-color-on-secondary-container: #a8d4f0;
-    
+
     --md-sys-color-tertiary: #0b3c5d;
     --md-sys-color-on-tertiary: #ffffff;
     --md-sys-color-tertiary-container: rgba(11, 60, 93, 0.3);
     --md-sys-color-on-tertiary-container: #b3d4e8;
-    
+
     /* Fondos oscuros */
     --md-sys-color-surface-dark: #1c1c1c;
     --md-sys-color-surface-dark-dim: #141414;
@@ -32,7 +32,7 @@
     --md-sys-color-surface-dark-container: #2a2a2a;
     --md-sys-color-surface-dark-container-high: #323232;
     --md-sys-color-surface-dark-container-highest: #3d3d3d;
-    
+
     /* Fondos claros */
     --md-sys-color-surface-light: #e6e6e6;
     --md-sys-color-surface-light-dim: #d9d9d9;
@@ -42,21 +42,21 @@
     --md-sys-color-surface-light-container: #f0f0f0;
     --md-sys-color-surface-light-container-high: #e6e6e6;
     --md-sys-color-surface-light-container-highest: #d9d9d9;
-    
+
     /* Texto para fondos oscuros */
     --md-sys-color-on-surface-dark: #e6e6e6;
     --md-sys-color-on-surface-dark-variant: #b3b3b3;
-    
+
     /* Texto para fondos claros */
     --md-sys-color-on-surface-light: #1c1c1c;
     --md-sys-color-on-surface-light-variant: #4d4d4d;
-    
+
     /* Outline para ambos temas */
     --md-sys-color-outline-dark: #4d4d4d;
     --md-sys-color-outline-dark-variant: #3d3d3d;
     --md-sys-color-outline-light: #b3b3b3;
     --md-sys-color-outline-light-variant: #cccccc;
-    
+
     /* Valores por defecto (secciones oscuras) */
     --md-sys-color-surface: var(--md-sys-color-surface-dark);
     --md-sys-color-surface-container-low: var(--md-sys-color-surface-dark-container-low);
@@ -233,6 +233,29 @@ body {
     width: 100%;
 }
 
+a[href^="mailto:"] {
+    color: #0B3C5D;
+    /* Un color personalizado */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Selecciona enlaces que empiezan con tel: */
+a[href^="tel:"] {
+    color: #0B3C5D;
+    /* Un verde para el teléfono, por ejemplo */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a[href^="mailto:"]:hover,
+a[href^="tel:"]:hover {
+    text-decoration: underline;
+    /* El subrayado aparece solo al pasar el mouse */
+    opacity: 0.8;
+    /* Se aclara un poco */
+}
+
 @media (max-width: 768px) {
     .nav-toggle {
         display: flex;
@@ -333,8 +356,8 @@ body {
     border-radius: var(--radius-button);
     cursor: pointer;
     transition: background var(--md-sys-motion-duration-short) var(--md-sys-motion-easing-emphasized),
-                color var(--md-sys-motion-duration-short) var(--md-sys-motion-easing-emphasized),
-                box-shadow var(--md-sys-motion-duration-short) var(--md-sys-motion-easing-emphasized);
+        color var(--md-sys-motion-duration-short) var(--md-sys-motion-easing-emphasized),
+        box-shadow var(--md-sys-motion-duration-short) var(--md-sys-motion-easing-emphasized);
     border: none;
 }
 
@@ -344,8 +367,8 @@ body {
     box-shadow: var(--md-sys-elevation-1);
     font-weight: 700;
     transition: background var(--md-sys-motion-duration-short) var(--md-sys-motion-easing-emphasized),
-                box-shadow var(--md-sys-motion-duration-short) var(--md-sys-motion-easing-emphasized),
-                transform var(--md-sys-motion-duration-short) var(--md-sys-motion-easing-emphasized);
+        box-shadow var(--md-sys-motion-duration-short) var(--md-sys-motion-easing-emphasized),
+        transform var(--md-sys-motion-duration-short) var(--md-sys-motion-easing-emphasized);
 }
 
 .btn-primary:hover {
@@ -418,8 +441,8 @@ body {
     padding: 1.75rem;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     transition: border-color var(--md-sys-motion-duration-medium) var(--md-sys-motion-easing-emphasized),
-                transform var(--md-sys-motion-duration-medium) var(--md-sys-motion-easing-emphasized-decelerate),
-                box-shadow var(--md-sys-motion-duration-medium) var(--md-sys-motion-easing-emphasized);
+        transform var(--md-sys-motion-duration-medium) var(--md-sys-motion-easing-emphasized-decelerate),
+        box-shadow var(--md-sys-motion-duration-medium) var(--md-sys-motion-easing-emphasized);
 }
 
 .service-card:hover {
@@ -586,7 +609,7 @@ body {
     border-radius: var(--md-sys-shape-corner-large);
     color: var(--md-sys-color-on-surface-light);
     transition: border-color var(--md-sys-motion-duration-short) var(--md-sys-motion-easing-emphasized),
-                box-shadow var(--md-sys-motion-duration-short) var(--md-sys-motion-easing-emphasized);
+        box-shadow var(--md-sys-motion-duration-short) var(--md-sys-motion-easing-emphasized);
 }
 
 .form-group input::placeholder,

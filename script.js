@@ -41,7 +41,7 @@
             // Si mantienes action="#", mostramos un mensaje y no enviamos.
             var action = form.getAttribute('action');
             if (!action || action === '#') {
-                alert('En un sitio estático el formulario no envía por sí solo. Puedes configurar Formspree, Netlify Forms o mailto: en el action del form.');
+                alert('Por el momento no estamos aceptando contactos por formulario. Por favor, contáctanos a través de nuestro correo electrónico o nuestro número de teléfono.');
                 return;
             }
             form.submit();
