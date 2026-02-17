@@ -156,12 +156,22 @@ body {
 }
 
 .logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
     font-family: 'Montserrat', sans-serif;
     font-size: 1.5rem;
     font-weight: 700;
     color: var(--md-sys-color-on-surface-dark);
     text-decoration: none;
     letter-spacing: -0.02em;
+}
+
+.logo-img {
+    height: 2rem;
+    width: auto;
+    display: block;
+    vertical-align: middle;
 }
 
 .logo-net {
@@ -637,11 +647,19 @@ body {
 }
 
 .footer-logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
     font-family: 'Montserrat', sans-serif;
     font-size: 1.25rem;
     font-weight: 700;
     margin: 0;
     color: var(--md-sys-color-on-surface-dark);
+}
+
+.footer-logo .logo-img {
+    height: 1.5rem;
+    width: auto;
 }
 
 .footer-logo .logo-net {
