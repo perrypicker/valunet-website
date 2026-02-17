@@ -41,7 +41,7 @@
             // Si mantienes action="#", mostramos un mensaje y no enviamos.
             var action = form.getAttribute('action');
             if (!action || action === '#') {
-                alert('Por el momento no estamos aceptando contactos por formulario. Por favor, contáctanos a través de nuestro correo electrónico o nuestro número de teléfono.');
+                alert('El formulario no está disponible por el momento. Por favor, contáctanos a través de nuestro número de teléfono o por correo electrónico.');
                 return;
             }
             form.submit();
