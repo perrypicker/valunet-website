@@ -6,6 +6,23 @@
 (function () {
     'use strict';
 
+    // Años de experiencia en Nosotros
+    const fechaInicio = new Date('2021-07-04T00:00:00');
+    const fechaActual = new Date();
+
+    let diferenciaAnios = fechaActual.getFullYear() - fechaInicio.getFullYear();
+
+    // Verificar si ya pasó el 4 de julio en el año actual
+    // Si no ha pasado, restar un año a la diferencia
+    const mesActual = fechaActual.getMonth();
+    const diaActual = fechaActual.getDate();
+
+    if (mesActual < 6 || (mesActual === 6 && diaActual < 4)) {
+        diferenciaAnios--;
+    }
+    // Inyectar el resultado en el span
+    document.getElementById('stat-years').textContent = `+${diferenciaAnios}`;
+
     // Año actual en el footer
     var yearEl = document.getElementById('year');
     if (yearEl) {
