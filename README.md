@@ -7,20 +7,23 @@ Sitio web corporativo de **Valunet**, empresa de servicios de TI y MSP (Managed 
 - **Inicio**: presentación y llamadas a la acción
 - **Servicios**: infraestructura y redes, ciberseguridad, soporte gestionado (MSP), nube y respaldo
 - **Nosotros**: propuesta de valor y experiencia
-- **Contacto**: formulario y datos de la empresa
+- **Contacto**: métodos de contacto
 
 ## Tecnologías
 
 - HTML, CSS y JavaScript
-- Sitio estático y responsivo
+- Sitio estático y responsive
 
 ## Estructura del proyecto
 
 ```
-├── index.html          # Página principal
-├── styles.css          # Estilos
-├── script.js           # Menú móvil y año en el footer
-├── assets/
-│   └── images/         # Imágenes (hero, servicios)
-└── README.md
+valunet-website/
+├── index.html          <-- Página principal
+├── css/                <-- Estilos
+│   └── styles.css
+├── js/                 <-- Interactividad
+│   └── main.js
+├── img/                <-- Imágenes (hero, servicios)
+└── assets/
+    └── favicons/       <-- Favicons
 ```
