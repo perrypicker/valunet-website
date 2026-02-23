@@ -12,8 +12,7 @@ Sitio web corporativo de **Valunet**, empresa de servicios de TI y MSP (Managed 
 ## Tecnologías
 
 - HTML, CSS y JavaScript
-- Sitio estático preparado para **GitHub Pages**
-- Diseño inspirado en Material 3 (responsive)
+- Sitio estático y responsivo
 
 ## Estructura del proyecto
 

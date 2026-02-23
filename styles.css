@@ -171,7 +171,6 @@ body {
     height: 2rem;
     width: auto;
     display: block;
-    vertical-align: middle;
 }
 
 .logo-net {
@@ -573,83 +572,89 @@ a[href^="tel:"]:hover {
     color: var(--md-sys-color-on-surface-light-variant);
 }
 
-.contact-wrapper {
+.contact-channels {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 3rem;
-    align-items: start;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
 }
 
-.contact-form {
+.contact-channel {
     display: flex;
     flex-direction: column;
-    gap: 1.25rem;
-}
-
-.form-group {
-    display: flex;
-    flex-direction: column;
-    gap: 0.4rem;
-}
-
-.form-group label {
-    font-weight: 500;
-    font-size: 0.875rem;
-    color: var(--md-sys-color-on-surface-light-variant);
-}
-
-.form-group input,
-.form-group textarea {
-    font-family: var(--font-body);
-    font-size: 1rem;
-    padding: 0.75rem 1rem;
-    min-height: 48px;
-    background: var(--md-sys-color-surface-light-container-lowest);
-    border: 1px solid var(--md-sys-color-outline-light-variant);
-    border-radius: var(--md-sys-shape-corner-large);
-    color: var(--md-sys-color-on-surface-light);
-    transition: border-color var(--md-sys-motion-duration-short) var(--md-sys-motion-easing-emphasized),
-        box-shadow var(--md-sys-motion-duration-short) var(--md-sys-motion-easing-emphasized);
-}
-
-.form-group input::placeholder,
-.form-group textarea::placeholder {
-    color: var(--md-sys-color-on-surface-light-variant);
-    opacity: 0.6;
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-    outline: none;
-    border-color: var(--md-sys-color-primary);
-    box-shadow: 0 0 0 2px var(--md-sys-color-primary-container);
-}
-
-.contact-info {
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 2rem 2rem 2rem 2rem;
     background: var(--md-sys-color-surface-light-container-lowest);
     border: 1px solid var(--md-sys-color-outline-light-variant);
     border-radius: var(--radius-lg);
-    padding: 1.5rem;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    transition:
+        border-color var(--md-sys-motion-duration-medium) var(--md-sys-motion-easing-emphasized),
+        transform var(--md-sys-motion-duration-medium) var(--md-sys-motion-easing-emphasized-decelerate),
+        box-shadow var(--md-sys-motion-duration-medium) var(--md-sys-motion-easing-emphasized);
 }
 
-.contact-info p {
-    margin: 0 0 0.5rem;
+.contact-channel:hover {
+    border-color: var(--md-sys-color-primary);
+    transform: translateY(-4px);
+    box-shadow: 0 6px 20px rgba(245, 124, 0, 0.15);
+    background: color-mix(in srgb, var(--md-sys-color-surface-light-container-lowest) 94%, var(--md-sys-color-primary-container));
+}
+
+.contact-channel-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    background: var(--md-sys-color-primary-container);
+    border-radius: var(--md-sys-shape-corner-large);
+    color: var(--md-sys-color-primary);
+    transition: background var(--md-sys-motion-duration-short) var(--md-sys-motion-easing-emphasized);
+}
+
+.contact-channel:hover .contact-channel-icon {
+    background: var(--md-sys-color-primary);
+    color: var(--md-sys-color-on-primary);
+}
+
+.contact-channel-icon svg {
+    width: 26px;
+    height: 26px;
+}
+
+.contact-channel-label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
     color: var(--md-sys-color-on-surface-light-variant);
 }
 
-.contact-info p strong {
+.contact-channel-value {
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--md-sys-color-on-surface-light);
+    letter-spacing: -0.01em;
+}
+
+.contact-location {
+    font-size: 0.95rem;
+    color: var(--md-sys-color-on-surface-light-variant);
+    margin: 0;
+    padding-top: 0.5rem;
+    border-top: 1px solid var(--md-sys-color-outline-light-variant);
+}
+
+.contact-location strong {
     color: var(--md-sys-color-on-surface-light);
 }
 
-.contact-note {
-    margin-top: 1rem !important;
-    font-size: 0.9rem;
-    opacity: 0.8;
-}
-
-@media (max-width: 768px) {
-    .contact-wrapper {
+@media (max-width: 640px) {
+    .contact-channels {
         grid-template-columns: 1fr;
     }
 }
