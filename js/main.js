@@ -1,6 +1,6 @@
 /**
- * Valunet — Script mínimo para sitio estático (GitHub Pages)
- * Menú móvil, año en footer y preparación del formulario.
+ * Valunet — Script mínimo para sitio estático
+ * Menú móvil y año en footer.
  */
 
 (function () {
@@ -44,24 +44,6 @@
                 nav.classList.remove('is-open');
                 navToggle.setAttribute('aria-expanded', 'false');
             });
-        });
-    }
-
-    // Formulario de contacto: en un sitio estático no hay backend.
-    // Opciones: usar un servicio como Formspree, Netlify Forms, o redirigir a mailto.
-    var form = document.querySelector('.contact-form');
-    if (form) {
-        form.addEventListener('submit', function (e) {
-            e.preventDefault();
-            // Para producción: configura action con Formspree u otro servicio.
-            // Ejemplo Formspree: action="https://formspree.io/f/tu-id"
-            // Si mantienes action="#", mostramos un mensaje y no enviamos.
-            var action = form.getAttribute('action');
-            if (!action || action === '#') {
-                alert('El formulario no está disponible por el momento. Por favor, contáctanos a través de nuestro número de teléfono o por correo electrónico.');
-                return;
-            }
-            form.submit();
         });
     }
 })();
